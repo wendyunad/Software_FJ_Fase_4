@@ -1,0 +1,63 @@
+
+=== INICIO DE SESIÓN: 2026-11-22 22:47:27.796034 ===
+[2026-11-22 22:47:27] [EVENTO] Cliente registrado: Cliente: Ana Gómez | ID: 1023456789
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: registrar_cliente
+[2026-11-22 22:47:27] [EVENTO] Cliente registrado: Cliente: Luis Pérez | ID: 52345678
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: registrar_cliente
+[2026-11-22 22:47:27] [ERROR] Fallo al registrar cliente: ClienteInvalidoError: [nombre] El nombre debe tener al menos 3 caracteres.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: registrar_cliente
+[2026-11-22 22:47:27] [ERROR] Fallo al registrar cliente: ClienteInvalidoError: [identificacion] La identificación debe ser numérica y tener al menos 6 dígitos.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: registrar_cliente
+[2026-11-22 22:47:27] [ERROR] Fallo al registrar cliente: ClienteDuplicadoError: Ya existe un cliente con la identificación 1023456789.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: registrar_cliente
+[2026-11-22 22:47:27] [ERROR] Fallo al registrar cliente: ClienteInvalidoError: [email] El email no tiene un formato válido.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: registrar_cliente
+[2026-11-22 22:47:27] [ERROR] Fallo al registrar cliente: 3 errores de validación
+[2026-11-22 22:47:27] [ERROR]    - [identificacion] La identificación debe ser numérica y tener al menos 6 dígitos.
+[2026-11-22 22:47:27] [ERROR]    - [telefono] El teléfono debe contener solo números y tener al menos 7 dígitos.
+[2026-11-22 22:47:27] [ERROR]    - [email] El email no tiene un formato válido.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: registrar_cliente
+[2026-11-22 22:47:27] [EVENTO] Servicio creado: Reserva de Sala 'Sala Ejecutiva' | Precio/hora: $80.00 | Disponible: True
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_servicio
+[2026-11-22 22:47:27] [EVENTO] Servicio creado: Alquiler de Equipo 'Laptop Gaming' | Precio/día: $45.00 | Disponible: True
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_servicio
+[2026-11-22 22:47:27] [EVENTO] Servicio creado: Asesoría Especializada 'Consultoría Python' | Precio/hora: $120.00 | Disponible: True
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_servicio
+[2026-11-22 22:47:27] [ERROR] Fallo al crear servicio: ServicioNoDisponibleError: El precio del servicio 'Sala Pequeña' debe ser mayor a cero.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_servicio
+[2026-11-22 22:47:27] [ERROR] Fallo al crear servicio: ServicioNoDisponibleError: El precio 'abc' no es un número válido. | Causa: ValueError: could not convert string to float: 'abc'
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_servicio
+[2026-11-22 22:47:27] [ERROR] Fallo al crear servicio: ServicioNoDisponibleError: Tipo de servicio no reconocido: 'catering'.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_servicio
+[2026-11-22 22:47:27] [ERROR] Fallo al crear servicio: ServicioDuplicadoError: Ya existe un servicio llamado 'Sala Ejecutiva'.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_servicio
+[2026-11-22 22:47:27] [ERROR] Fallo al crear servicio: ServicioNoDisponibleError: El servicio 'Proyector' no está disponible.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_servicio
+[2026-11-22 22:47:27] [EVENTO] Reserva #1 confirmada: Ana Gómez → Sala Ejecutiva | Costo: $257.04
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al crear reserva: ReservaInvalidaError: Cliente no encontrado.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al crear reserva: ServicioNoDisponibleError: Servicio no encontrado.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al crear reserva: ReservaInvalidaError: La duración debe ser un número mayor a cero.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al crear reserva: ReservaInvalidaError: No se pudo confirmar la reserva: Una asesoría no puede durar más de 8 horas. | Causa: ReservaInvalidaError: Una asesoría no puede durar más de 8 horas.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al crear reserva: ReservaInvalidaError: No se pudo confirmar la reserva: El descuento debe estar entre 0 y 100 (%). | Causa: CalculoInconsistenteError: El descuento debe estar entre 0 y 100 (%).
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al crear reserva: ReservaInvalidaError: La duración debe ser un número mayor a cero.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_reserva
+[2026-11-22 22:47:27] [EVENTO] Reserva #1 cancelada.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: cancelar_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al cancelar reserva #1: OperacionNoPermitidaError: La reserva ya está cancelada.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: cancelar_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al procesar reserva #1: OperacionNoPermitidaError: Solo se pueden procesar reservas confirmadas (estado actual: Cancelada).
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: procesar_reserva
+[2026-11-22 22:47:27] [EVENTO] Reserva #2 confirmada: Luis Pérez → Consultoría Python | Costo: $285.60
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: crear_reserva
+[2026-11-22 22:47:27] [EVENTO] Reserva #2 procesada.
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: procesar_reserva
+[2026-11-22 22:47:27] [ERROR] Fallo al procesar reserva #99: ReservaInvalidaError: La reserva #99 no existe. | Causa: IndexError: list index out of range
+[2026-11-22 22:47:27] [EVENTO] Fin de operación: procesar_reserva
+
+=== INICIO DE SESIÓN: 2026-11-22 22:47:27.827544 ===
